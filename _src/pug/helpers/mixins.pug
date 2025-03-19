@@ -1,5 +1,6 @@
 
 mixin svg(name)
+  //- - const sprite = `${baseDir}img/sprites.svg`
   - const sprite = `${baseDir}img/sprites.svg`
   svg&attributes(attributes)
     use(xlink:href= `${sprite}#${name}`)
@@ -45,3 +46,19 @@ mixin img-retina(name, type, alt, className, width, height, ...args)
 //- +img-svg('', '', '', '', '', '')
 mixin img-svg(name, className, alt, width, height)
   img(class=`${className}` src=`${baseDir}img/svg/${name}.svg` alt=alt width=width height=height loading="lazy")
+
+mixin date(name, label)
+  label.filter__label(for=`date_${name}`) 
+    span.filter__title= `${label}:`
+    .filter__datepicker.datepicker
+      span.datepicker__calendar
+        +svg('calendar')
+      input.filter__input.datepicker__input(type="date" name=`${name}` value="" required placeholder="Выбрать..." id=`date_${name}`)
+      button.datepicker__reset(type="button" aria-label="Сбросить дату" onclick=`document.getElementById('date_${name}').value = '';`) 
+        +svg('close')
+
+mixin cell(label, value, modifier)
+  .content__cell.cell(class=`cell--${modifier}`) 
+    span.cell__label= label
+    span.cell__value(class=`cell__value--${modifier}`)= value
+

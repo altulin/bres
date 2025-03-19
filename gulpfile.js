@@ -16,7 +16,7 @@ const watch = (cb) => {
 };
 
 const fonts = (cb) => {
-  $.series(t.ttf2Woff, t.ttf2Woff2, t.cleanTtf, t.copyFonts)();
+  $.series(t.cleanTtf, t.copyFonts)();
   cb();
 };
 
@@ -31,7 +31,7 @@ const img = (cb) => {
 };
 
 const develop = (cb) => {
-  $.series(cleanDev, $.parallel(t.pug, t.scss, fonts, t.js, img))();
+  $.series(cleanDev, $.series(t.pug, t.scss, fonts, t.js, img))();
   cb();
 };
 

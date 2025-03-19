@@ -1,0 +1,32 @@
+section.promo 
+  .promo__inner.container 
+
+
+  
+    include ./header.pug
+
+    .promo__info.info 
+      h2.info__title Мои поездки
+      button.info__add(type="button") 
+        +svg('plus')
+        span Оформить поездку
+
+    include ./filter.pug
+
+    .promo__content.content
+      .content__inner
+        ul.content__list 
+          each item in new Array(20).fill('')
+            include ./row.pug
+
+       
+
+
+    
+    
+
+
+
+
+   
+  

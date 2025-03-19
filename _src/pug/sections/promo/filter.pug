@@ -1,0 +1,22 @@
+.promo__filter.filter
+  .filter__inner
+    .filter__date 
+      +date('start','Период с')
+      +date('end','по')
+
+    .filter__search.search 
+      label.filter__label.search__label(for="search" aria-label="Поиск") 
+        span.search__icon
+          +svg('search')
+        input.filter__input.search__input(type="text" name="search" placeholder="Поиск" id="search")
+
+    button.filter__reset(type="button")
+      +svg('reset')
+      span Сбросить все
+    
+    .filter__checkbox.checkbox 
+      label.filter__label(for="check") 
+        input.checkbox__input#check(type="checkbox" name='archival')
+        span.checkbox__mark
+        span.filter__title.checkbox__title Показать архивные поездки
+

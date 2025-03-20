@@ -595,7 +595,7 @@ main {
   bottom: 0;
   left: 0;
   position: absolute;
-  background-image: url("../img/underline.svg");
+  background-image: url("./img/underline.svg");
   background-size: cover;
 }
 

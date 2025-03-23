@@ -10,7 +10,7 @@
     "build:test": "gulp production --production --test",
     "build:prod": "gulp production --production --prod",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -v {.vscode,.gitignore,.prettierrc,.env.*,.robots.*,/_src/**/*}"
   },
   "keywords": [],
   "author": "",

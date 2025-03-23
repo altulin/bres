@@ -50,32 +50,22 @@
 					<div class="promo__filter filter">
 						<div class="filter__inner">
 							<div class="filter__date"> 
-								<label class="filter__label" for="date_start"> <span class="filter__title">Период с:</span>
-									<div class="filter__datepicker datepicker"><span class="datepicker__calendar">
+								<label class="filter__label" for="date_start"> <span class="filter__title">Период с:</span><span class="filter__datepicker datepicker"><span class="datepicker__calendar">
 											<svg>
 												<use xlink:href="./img/sprites.svg#calendar"></use>
 											</svg></span>
-										<input class="filter__input datepicker__input" type="date" name="start" value="" required="required" placeholder="Выбрать..." id="date_start"/>
-										<button class="datepicker__reset" type="button" aria-label="Сбросить дату" onclick="document.getElementById('date_start').value = '';"> 
+										<input class="filter__input datepicker__input" type="date" name="start" value="" required="required" data-placeholder="Выбрать..." id="date_start"/><span class="datepicker__reset" role="button" aria-label="Сбросить дату" onclick="document.getElementById('date_start').value = '';"> 
 											<svg>
 												<use xlink:href="./img/sprites.svg#close"></use>
-											</svg>
-										</button>
-									</div>
-								</label>
-								<label class="filter__label" for="date_end"> <span class="filter__title">по:</span>
-									<div class="filter__datepicker datepicker"><span class="datepicker__calendar">
+											</svg></span></span></label>
+								<label class="filter__label" for="date_end"> <span class="filter__title">по:</span><span class="filter__datepicker datepicker"><span class="datepicker__calendar">
 											<svg>
 												<use xlink:href="./img/sprites.svg#calendar"></use>
 											</svg></span>
-										<input class="filter__input datepicker__input" type="date" name="end" value="" required="required" placeholder="Выбрать..." id="date_end"/>
-										<button class="datepicker__reset" type="button" aria-label="Сбросить дату" onclick="document.getElementById('date_end').value = '';"> 
+										<input class="filter__input datepicker__input" type="date" name="end" value="" required="required" data-placeholder="Выбрать..." id="date_end"/><span class="datepicker__reset" role="button" aria-label="Сбросить дату" onclick="document.getElementById('date_end').value = '';"> 
 											<svg>
 												<use xlink:href="./img/sprites.svg#close"></use>
-											</svg>
-										</button>
-									</div>
-								</label>
+											</svg></span></span></label>
 							</div>
 							<div class="filter__search search"> 
 								<label class="filter__label search__label" for="search" aria-label="Поиск"> <span class="search__icon">
